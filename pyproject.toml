@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pr-roast-mcp"
+version = "0.1.0"
+description = "MCP server that roasts your pull requests. Brutally honest code review with humor."
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["mcp>=1.0"]
+
+[project.scripts]
+pr-roast-mcp = "pr_roast_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pr_roast_mcp"]
